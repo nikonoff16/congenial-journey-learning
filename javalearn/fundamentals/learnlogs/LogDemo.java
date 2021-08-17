@@ -15,6 +15,12 @@ public class LogDemo {
 
     public void getMessage() {
         LOGGER.setLevel(Level.FINE);
-        LOGGER.log(Level.INFO, "I'm in the method");
+
+        /*
+        Why it's not working for a while...
+        TODO: I shall find solution of this behaviour.
+        */
+        String strangeNumber = "#32453235";
+        LOGGER.log(Level.INFO, "I'm in the method number {0}", strangeNumber);
     }
 }
