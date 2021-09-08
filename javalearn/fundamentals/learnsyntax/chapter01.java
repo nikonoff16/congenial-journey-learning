@@ -4,13 +4,23 @@ import java.io.Console;
 import java.util.Scanner;
 
 public class chapter01 {
+    /**
+     * Выполняю примеры и упражнения из первой главы книги К. Хорстмана Java SE 9 Базовый курс
+     * @param args
+     */
     public static void main(String[] args) {
         // tryScanner();
         // tryConsole();
         exerciseOne(1000);
+        System.out.println(exerciseTwo(123));
+        System.out.println(exerciseTwo(-123));
+
     }
 
     private static void tryScanner() {
+        /*
+         * Тестирую Scanner
+         */
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("How old are you? ");
@@ -21,6 +31,9 @@ public class chapter01 {
     }
 
     private static void tryConsole() {
+        /*
+         * Тестирую Console
+         */
         Console terminal = System.console();
 
         String userName = terminal.readLine("User name: ");
@@ -29,6 +42,9 @@ public class chapter01 {
     }
     
     private static void exerciseOne(int number) {
+        /*
+         * Выполняю первое упражнение
+         */
         double doubledNumber = (double) number;
 
         String binaryRepr = Integer.toString(number, 2);
@@ -40,6 +56,13 @@ public class chapter01 {
         System.out.println(octaRepr);
         System.out.println(hexRepr);
         System.out.println(hexDoubleRepor);
-        
+    }
+
+    private static int exerciseTwo(int number) {
+        /*
+         * Выполняю второе упражнение
+         */
+        return Math.floorMod(number, 359);
+
     }
 }
