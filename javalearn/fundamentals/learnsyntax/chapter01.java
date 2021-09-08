@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class chapter01 {
     public static void main(String[] args) {
         // tryScanner();
-        tryConsole();
+        // tryConsole();
+        exerciseOne(1000);
     }
 
     private static void tryScanner() {
@@ -27,4 +28,18 @@ public class chapter01 {
         System.out.println("Hello, " + userName + "! I know your fucking password - " + password.toString() + "\nOoops.. Actually no.. :(");
     }
     
+    private static void exerciseOne(int number) {
+        double doubledNumber = (double) number;
+
+        String binaryRepr = Integer.toString(number, 2);
+        String octaRepr = Integer.toString(number, 8);
+        String hexRepr = Integer.toString(number, 16);
+        String hexDoubleRepor = Double.toHexString(doubledNumber);
+
+        System.out.println(binaryRepr);
+        System.out.println(octaRepr);
+        System.out.println(hexRepr);
+        System.out.println(hexDoubleRepor);
+        
+    }
 }
