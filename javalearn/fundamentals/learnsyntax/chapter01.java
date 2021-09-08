@@ -14,6 +14,8 @@ public class chapter01 {
         exerciseOne(1000);
         System.out.println(exerciseTwo(123));
         System.out.println(exerciseTwo(-123));
+        System.out.println(exerciseThreeA(3, 2, 1));
+        System.out.println(exerciseThreeB(3, 2, 1));
         exerciseFour();
 
     }
@@ -64,6 +66,28 @@ public class chapter01 {
          * Выполняю второе упражнение
          */
         return Math.floorMod(number, 359);
+    }
+
+    private static int exerciseThreeA(int first, int second, int third) {
+        int result = 0;
+        if (first > second) {
+            if (first > third) {
+                result = first;
+            } else {
+                result = third;
+            }
+        } else {
+            if (second > third) {
+                result = second;
+            } else {
+                result = third;
+            }
+        }
+        return result;
+    }
+    
+    private static int exerciseThreeB(int first, int second, int third) {
+        return Math.max(Math.max(first, second), third);
     }
     
     private static void exerciseFour() {
