@@ -14,6 +14,7 @@ public class chapter01 {
         exerciseOne(1000);
         System.out.println(exerciseTwo(123));
         System.out.println(exerciseTwo(-123));
+        exerciseFour();
 
     }
 
@@ -63,6 +64,16 @@ public class chapter01 {
          * Выполняю второе упражнение
          */
         return Math.floorMod(number, 359);
+    }
+    
+    private static void exerciseFour() {
+        /*
+         * Напишите программу, выводящую  наименьшее и наибольшее положительные значения типа double
+         * Можно воспользоваться Math.nextUp()
+         */
+
+        System.out.println(Math.nextUp(Double.MAX_VALUE));
+        System.out.println(Math.nextUp(0));
 
     }
 }
