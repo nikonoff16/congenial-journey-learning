@@ -1,6 +1,7 @@
 package javalearn.fundamentals.learnsyntax;
 
 import java.io.Console;
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class chapter01 {
@@ -11,12 +12,15 @@ public class chapter01 {
     public static void main(String[] args) {
         // tryScanner();
         // tryConsole();
-        exerciseOne(1000);
-        System.out.println(exerciseTwo(123));
-        System.out.println(exerciseTwo(-123));
-        System.out.println(exerciseThreeA(3, 2, 1));
-        System.out.println(exerciseThreeB(3, 2, 1));
-        exerciseFour();
+        // exerciseOne(1000);
+        // System.out.println(exerciseTwo(123));
+        // System.out.println(exerciseTwo(-123));
+        // System.out.println(exerciseThreeA(3, 2, 1));
+        // System.out.println(exerciseThreeB(3, 2, 1));
+        // exerciseFour();
+
+        BigInteger test = exerciseSix(1000);
+        System.out.println(test);
 
     }
 
@@ -99,5 +103,16 @@ public class chapter01 {
         System.out.println(Math.nextUp(Double.MAX_VALUE));
         System.out.println(Math.nextUp(0));
 
+    }
+
+    private static BigInteger exerciseSix(int factorial) {
+        BigInteger result = new BigInteger("1");
+
+        for (int i = 1; i<=factorial; i++) {
+            BigInteger iteration = new BigInteger(Integer.toString(i));
+            result = result.multiply(iteration);
+        }
+
+        return result;
     }
 }
