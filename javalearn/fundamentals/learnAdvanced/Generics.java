@@ -1,7 +1,6 @@
 //package javalearn.fundamentals.learnAdvanced;
 
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 public class Generics {
     public static void main(String[] args) {
@@ -9,7 +8,7 @@ public class Generics {
         Integer i = pair.getFirst(); // 1
         String s = pair.getSecond(); // "hello"
 
-        System.out.println(i + " " + s);
+//        System.out.println(i + " " + s);
 
         Pair<Integer, String> pair2 = Pair.of(1, "hello");
         boolean mustBeTrue = pair.equals(pair2); // true!
@@ -17,7 +16,12 @@ public class Generics {
 
         Optional<String> test = Optional.of("test");
 
-        System.out.println(mustBeTrue + " " + mustAlsoBeTrue);
+//        System.out.println(mustBeTrue + " " + mustAlsoBeTrue);
+
+        Collection<?> collection = new ArrayList<Object>();
+        Object object = new Object();
+
+
     }
     
 }
